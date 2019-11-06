@@ -27,3 +27,11 @@ groovy inchis.groovy
 ```
 
 When the success state is ERROR, nothing is outputted.
+
+## Calculate SMILES strings
+
+The last script calculates a SMILES for each entry in the SD file:
+
+```bash
+groovy smiles.groovy
+```
