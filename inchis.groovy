@@ -9,8 +9,23 @@ import org.openscience.cdk.tools.manipulator.*;
 import org.openscience.cdk.inchi.*;
 import net.sf.jniinchi.INCHI_RET;
 
+def cli = new CliBuilder(usage: 'inchis.groovy')
+cli.h(longOpt: 'help', 'print this message')
+cli.f(longOpt: 'input-file', args:1, argName:'filename', 'Name of the SDF file')
+def options = cli.parse(args)
+
+if (options.help) {
+  cli.usage()
+  System.exit(0)
+}
+
+sdfFile = "etoxsys-all-sdf.sdf"
+if (options.f) {
+  sdfFile = options.f
+}
+
 iterator = new IteratingSDFReader(
-  new File("etoxsys-all-sdf.sdf").newReader(),
+  new File(sdfFile).newReader(),
   SilentChemObjectBuilder.getInstance()
 )
 
