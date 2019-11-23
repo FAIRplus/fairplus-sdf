@@ -14,7 +14,7 @@ When generating InChIs, the InChI library may return two success states reflecti
 the compound record in the SD file: WARNING and ERROR. This first script reports such issues:
 
 ```bash
-groovy badRecords.groovy
+groovy badRecords.groovy -f foo.sdf
 ```
 
 ## Calculate InChIs
@@ -23,7 +23,7 @@ The second script calculates InChIs for entries in the SD file, but only when th
 was OKAY or with a WARNING (two InChI library success states):
 
 ```bash
-groovy inchis.groovy
+groovy inchis.groovy -f foo.sdf
 ```
 
 When the success state is ERROR, nothing is outputted.
@@ -33,5 +33,5 @@ When the success state is ERROR, nothing is outputted.
 The last script calculates a SMILES for each entry in the SD file:
 
 ```bash
-groovy smiles.groovy
+groovy smiles.groovy -f foo.sdf
 ```
