@@ -28,6 +28,12 @@ groovy inchis.groovy -f foo.sdf
 
 When the success state is ERROR, nothing is outputted.
 
+Similarly, InChIKeys can be generated:
+
+```bash
+groovy inchikeys.groovy -f foo.sdf
+```
+
 ## Calculate SMILES strings
 
 The last script calculates a SMILES for each entry in the SD file:
