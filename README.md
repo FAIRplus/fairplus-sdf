@@ -3,7 +3,7 @@
 ## Requirements
 
 To run the below scripts, you need a [Groovy](https://groovy.apache.org/download.html) installation.
-The Groovy scripts use version 2.3 of the [Chemistry Development Kit](https://cdk.github.io/)
+The Groovy scripts use version 2.5 of the [Chemistry Development Kit](https://cdk.github.io/)
 (see also doi:[10.1186/s13321-017-0220-4](https://doi.org/10.1186/s13321-017-0220-4)).
 This library and its use in Groovy is further explain in
 the book [Groovy Cheminformatics with the Chemistry Development Kit](https://egonw.github.io/cdkbook/).
@@ -15,6 +15,14 @@ the compound record in the SD file: WARNING and ERROR. This first script reports
 
 ```bash
 groovy badRecords.groovy -f foo.sdf
+```
+
+The output may look like:
+
+```
+Sulfinpyrazone  Omitted undefined stereo        WARNING
+Isosorbide mononitrate  Charges were rearranged WARNING
+Compound52      Proton(s) added/removed WARNING
 ```
 
 ## Calculate InChIs
