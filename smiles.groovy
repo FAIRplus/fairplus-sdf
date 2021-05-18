@@ -1,4 +1,4 @@
-@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.3')
+@Grab(group='org.openscience.cdk', module='cdk-bundle', version='2.5')
 
 import org.openscience.cdk.interfaces.*;
 import org.openscience.cdk.io.*;
